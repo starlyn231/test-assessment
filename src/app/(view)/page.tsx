@@ -31,15 +31,15 @@ export default async function Home() {
         <SectionInfo />
       </section>
 
-      <div className='bg-blue-white mt-10 flex w-full flex-col items-center justify-center'>
+      <div className='bg-blue-white w-full mt-10 flex  flex-col items-center justify-center'>
         <h2
           className='pb-3 text-[18px] font-bold uppercase tracking-tight 
                 text-[#222] md:text-[24px] lg:text-[28px] xl:text-[32px] '
         >
-          TOP COLLECTION
+          We also serve the following areas:
         </h2>
 
-        <div className='mx-auto flex w-full max-w-[700px] flex-wrap items-center justify-center text-center'>
+        <div className='mx-auto flex w-full flex-wrap items-center justify-center text-center'>
           <div className='w-full border-gray-700'>
             <VehicleDropdowns vehicleTypes={Results} />
           </div>

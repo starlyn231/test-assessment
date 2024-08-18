@@ -22,7 +22,7 @@ const VehicleDropdowns = ({ vehicleTypes }: VehicleDropdownsProps) => {
   const modelYears = Array.from({ length: currentYear - 2015 + 1 }, (_, i) => 2015 + i);
 
   return (
-    <div className="w-full p-6 bg-white shadow-lg rounded-lg  max-w-md mx-auto">
+    <div className=" p-10 bg-white shadow-lg rounded-lg w-4/6 max-w-[800px] mx-auto my-5 ">
       <div className="flex space-x-4">
         <div className="w-1/2">
           <label htmlFor="vehicleType" className="block text-sm font-medium text-gray-700">

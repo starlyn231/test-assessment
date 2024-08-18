@@ -92,7 +92,7 @@ export default function NavbarMain() {
                 </Dropdown>
 
                 <NavbarItem>
-                    <Link color="foreground" href="/about">
+                    <Link href="/">
                         Information
                     </Link>
                 </NavbarItem>
