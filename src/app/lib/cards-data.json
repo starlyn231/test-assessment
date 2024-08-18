@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "Primer Slide",
+      "tagline": "Botella de agua personalizada de cristal con funda (420 ml)",
+      "image": "/0.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Segundo Slide",
+      "tagline": "Botella de agua personalizada de cristal con funda (420 ml)",
+      "image": "/papelPrint.png"
+    },
+    {
+      "id": 3,
+      "title": "Tercer Slide",
+      "tagline": "Botella de agua personalizada de cristal con funda (420 ml)",
+      "image": "/colour-12.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Tercer Slide",
+        "tagline": "Botella de agua personalizada de cristal con funda (420 ml)",
+        "image": "/papelPrint.png"
+      }
+  ]
+  
