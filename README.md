@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Car-Dealer-App
 
-## Getting Started
+## Description
 
-First, run the development server:
+This project is a Car-Dealer-App built with Next.js, Tailwind CSS, and
+TypeScript. It uses the NHTSA API to fetch information about vehicle makes and
+models. The project features a carousel of slides and styled components using
+Tailwind CSS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js**: A React framework for server-side rendering and static site
+  generation.
+- **React**: A library for building user interfaces.
+- **TypeScript**: A superset of JavaScript that adds static types.
+- **Tailwind CSS**: A utility-first CSS framework.
+- **@heroicons/react**: A set of icons for React.
+- **@monaco-editor/react**: A React component for the Monaco editor.
+- **framer-motion**: A library for animations in React.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repository:
 
-## Learn More
+   ```bash
+   git clone <REPOSITORY_URL>
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+bash Copy code git clone <REPOSITORY_URL> Navigate to the project directory:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+bash Copy code cd landing-page Install the dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+bash Copy code npm install Scripts dev: Starts the development server.
 
-## Deploy on Vercel
+bash Copy code npm run dev build: Builds the application for production.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+bash Copy code npm run build start: Starts the application in production mode.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+bash Copy code npm run start lint: Runs the linter.
+
+bash Copy code npm run lint
+
+Requirements
+
+1. Create a Next.js Application
+2. Create a Filter Page Design the Filter Page:
+
+The filter page should serve as the home page of the application. Use Tailwind
+CSS for styling. Customize the design and styling of the components as needed.
+Add Vehicle Type and Model Year Selectors:
+
+Fetch vehicle types from the following endpoint:
+
+plaintext Copy code
+https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json
+Populate a dropdown selector with the fetched vehicle types.
+
+Create another dropdown selector for model years ranging from 2015 to the
+current year.
+
+Enable the "Next" Button:
+
+Add a "Next" navigation button that is initially disabled. Use the Link
+component for navigation. Enable the button only when a vehicle type and model
+year are selected. Navigate to the Result Page:
+
+On clicking "Next", navigate to the route result/[makeId]/[year]. 3. Create the
+Result Page Implement generateStaticParams:
+
+Define the generateStaticParams function to generate static paths for the result
+pages. Fetch the necessary data to determine the paths to be pre-rendered. Fetch
+Vehicle Data:
+
+On the result page, obtain the vehicle type and model year from the params.
